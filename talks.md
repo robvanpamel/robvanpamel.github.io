@@ -3,7 +3,7 @@ title: Speaking
 menus: header
 ---
 
-I am always eager to share my knowledge and It can't be done in a better way than when speaking about it. 
+I am always eager to share my knowledge and It can't be done in a better way than when speaking about it. You can track my talk information also on sessionize over here: https://sessionize.com/rob-van-pamel/
 
 # Talks 
 ## No. I don't need servers for .NET in AWS. 
