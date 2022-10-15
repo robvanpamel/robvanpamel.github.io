@@ -1,16 +1,18 @@
-remote_theme: jekyll/minima
-
 title: Rob Van Pamel
 description: Rob Van Pamel
 
 author:
   name: Rob Van Pamel
   email: "rob.vanpamel@gmail.com"
+
 minima:
   social_links:
     twitter: robvanpamel
     github: robvanpamel
     linkedin: rob-van-pamel-83727317
 
+show_excerpts: true
+
+remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
