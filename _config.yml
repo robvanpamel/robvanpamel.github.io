@@ -1,3 +1,11 @@
 theme: minima
+social_links:
+    twitter: robvanpamel
+    github: rob.vanpamel
+    linkedin: rob.vanpamel
+author:
+  name: Rob Van Pamel
+  email: "Rob Van Pamel@gmail.com"
+
 plugins:
 - jekyll-menus
