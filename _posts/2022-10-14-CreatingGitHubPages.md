@@ -4,8 +4,6 @@ date: 2022-10-14
 excerpt_separator: <!--more-->
 tags: Github Jekyll
 ---
-# Working with Github pages
-
 _"Are you serious, Rob, you don't know how to create Github pages?"_
 
 Yes, I never looked into to be honest. I know you can create them with regular HTML, CSS and some JS, but I want to work on something new, so I'll start with Jekyll and markdown. 
