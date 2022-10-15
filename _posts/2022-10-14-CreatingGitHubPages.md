@@ -1,6 +1,7 @@
 ---
-title: "The first steps in Github Pages"
-date: 2022-10-14
+title: The first steps in Github Pages
+date: 2022-10-14    
+excerpt: A small excerpt
 ---
 # Working with Github pages
 
