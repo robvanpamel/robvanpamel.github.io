@@ -1,4 +1,4 @@
-theme: minima
+remote_theme: jekyll/minima
 social_links:
     twitter: robvanpamel
     github: rob.vanpamel
@@ -8,4 +8,4 @@ author:
   email: "Rob Van Pamel@gmail.com"
 
 plugins:
-- jekyll-menus
+  - jekyll-remote-theme
