@@ -1,7 +1,8 @@
 ---
 title: The first steps in Github Pages
-date: 2022-10-14    
-excerpt: A small excerpt
+date: 2022-10-14   
+excerpt_separator: <!--more-->
+tags: Github Jekyll
 ---
 # Working with Github pages
 
@@ -9,7 +10,7 @@ _"Are you serious, Rob, you don't know how to create Github pages?"_
 
 Yes, I never looked into to be honest. I know you can create them with regular HTML, CSS and some JS, but I want to work on something new, so I'll start with Jekyll and markdown. 
 
-I want something that is easy to maintain, so I am able to proceed with it with not too much effort and overhead. Jekyll and markdown seems to be a good fit. But as I've never used github pages before so, it's all new for me. As the purpose of the github pages is to serve as a blog, it's a very good starting point. Allright lets dive into it. 
+I want something that is easy to maintain, so I am able to proceed with it with not too much effort and overhead. Jekyll and markdown seems to be a good fit. <!--more--> But as I've never used github pages before so, it's all new for me. As the purpose of the github pages is to serve as a blog, it's a very good starting point. Allright lets dive into it. 
 
 ## Specify a theme
 
