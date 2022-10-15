@@ -47,5 +47,14 @@ Another default setting of the minima theme is that there is no excerpt shown on
 ````
 show_excerpts: true
 ````
+Afterwards add the excerpt seperator in your blogpost header and off course also in the blogpost. Here is an example 
+
+    title: The next steps in Github Pages
+    date: 2022-10-15   
+    excerpt_separator: <!--more-->
+    ---
+    After the first steps follows ... the next steps. I created the first blogpost and made it public, I already realised that it wasn't ready yet to be launched. It was way too early, but at least it was something. 
+
+    So while waiting  <!--more--> 
 
 That will be it for now, it the next one, i would like to change some more smaller things, like a favicon, look at SEO, add tags to the blogposts, and so on. 
