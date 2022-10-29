@@ -60,7 +60,7 @@ The preference here goes to the usage of user-assigned above system-assigned man
 User-assigned managed identities have their own lifecycle, what improves creation of resources and resource groups. While the lifecycle of system-assigned managed identities is attached to the resource. This could require multiple runs of a pipeline before a role-assignment can be done, because you can't create a role assignment for a resource which isn’t created yet. While with a user-assigned managed identity, the role assignments can be created before the resource are created, which makes it easier to use.  
 
 That's it for today, thanks for reading along! 
-In the next blog post I 'll explain more in detail how you can create a user-assigned identities and how to use them to access a storage account from an appservice. See you there!
+In the next blog post I 'll explain more in detail how you can create user-assigned identities and how to use them to access a storage account from an appservice. See you there!
 
 # References
 - https://learn.microsoft.com/en-us/azure/active-directory/authentication/overview-authentication
