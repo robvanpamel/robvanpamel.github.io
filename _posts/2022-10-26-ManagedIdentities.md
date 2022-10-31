@@ -1,5 +1,5 @@
 ---
-title: Managed Identities in Azure
+title: Improve security with Managed Identities in Azure
 date: 2022-10-31 
 excerpt_separator: <!--more-->
 tags: Azure Managed Identities
