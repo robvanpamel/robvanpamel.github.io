@@ -44,7 +44,7 @@ Role assignments are maintained individually as well as for user as for system-a
 ## Deployments and Managed Identities
 Although both, user or system assigned, managed identities can serve the same needs, user-assigned Managed identities have my preference. This mainly from a pracitcal perspecitice when deploying resources together with the managed identities for that resource. When using system-assigned managed identities, the number of role assignments which are required can increase very rapidly. Be aware that there is a limit when creating these assignments. 
 
-![system-assigned identities*](https://raw.githubusercontent.com/robvanpamel/robvanpamel.github.io/main/_posts/ManagedIdentities/ManagedIdentities-Page-2.drawio.png)*system assigned identities - 8 role assignements*
+![system-assigned identities](https://raw.githubusercontent.com/robvanpamel/robvanpamel.github.io/main/_posts/ManagedIdentities/ManagedIdentities-Page-2.drawio.png)*system assigned identities - 8 role assignements*
 
 In the example above (image from microsoft) already 8 role assignments need to be created. When we are working with User Based identities only 2 are required, see below. This already makes the life a bit easier. 
 
