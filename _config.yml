@@ -16,3 +16,4 @@ show_excerpts: true
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
+  - jekyll-feed
