@@ -14,6 +14,6 @@ I started to work as a .NET consultant in 2007 in a world with many Winform- and
 
 As a consultant, I see many things. Some things might look the same, but they are not. That is what I like about it, getting out of the comfort zone and learning something new every day! Recently I discovered that I like to spread the knowledge as well. This is why I started to speak at conferences and now recently started to blog as well. 
 
-For those who know me, I am a coffee addict. So if you like what you see here: feel free to support me and buy me a coffee, it is highly appreciated! 
+For those who don't know me, I am a coffee addict. So if you like what you see here: feel free to support me and buy me a coffee, it is highly appreciated! 
 
 <a href="https://www.buymeacoffee.com/robvanpamel"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee!&emoji=&slug=robvanpamel&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
