@@ -2,7 +2,7 @@
 title: Accessing blob storage using Managed Identities in Azure
 date: 2022-11-21 
 excerpt_separator: <!--more-->
-tags: Azure Azure ManagedIdentities Bicep BlobStorage
+tags: Azure ManagedIdentities Bicep BlobStorage
 ---
 In my [previous blog post](https://robvanpamel.github.io/2022/10/31/ManagedIdentities.html), the benefits of Managed Identities are handled. As mentioned over there, they increase the security inside your Azure environment. Now we will take this theorie into practice and start working with it. We'll create an azure function which access a storage account and writes a stream to it, by using the user Managed Identity.
  <!--more-->
