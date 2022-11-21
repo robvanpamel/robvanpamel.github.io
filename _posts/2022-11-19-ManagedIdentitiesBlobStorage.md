@@ -4,7 +4,7 @@ date: 2022-11-21
 excerpt_separator: <!--more-->
 tags: Azure Azure ManagedIdentities Bicep BlobStorage
 ---
-In my previous blog post, you could already see which benefits Managed Identities have. As mentioned over there, they increase the security inside your Azure environment. Now we will take this theorie into practice and start working with it. We'll create an azure function which access a storage account and writes a stream to it, by using the user Managed Identity.
+In my [previous blog post](https://robvanpamel.github.io/2022/10/31/ManagedIdentities.html), the benefits of Managed Identities are handled. As mentioned over there, they increase the security inside your Azure environment. Now we will take this theorie into practice and start working with it. We'll create an azure function which access a storage account and writes a stream to it, by using the user Managed Identity.
  <!--more-->
 
 There will be 2 parts in this blogpost, the first one is to setup up the Azure environment, creating the azure function, the managed Identities etc. The second part where the application will be updated to use the User Managed Identity to write the stream to the blobl storage.
@@ -32,7 +32,7 @@ The service plan is create on the `Dynamic` tier and as `reserved` which enabled
         }
     }
 
-The function app and its linked storage account is described below. The functionapp is attached to the App Service Plan via the `serviceFarmId`. The AzureWebJobsStorage which is listed in the appSettings, only purposes the storage where the binaries of the function is stored. It isn't involved in the futher process of accessing data via a user managed identity. 
+The function app and its linked storage account is described below. The functionapp is attached to the App Service Plan via the `serviceFarmId`. The purpose of the AzureWebJobsStorage which is listed in the appSettings, is to store the binaries of the function. It isn't involved in the futher process of accessing data via a user managed identity. 
 
     resource functionApp 'Microsoft.Web/sites@2022-03-01'={
     name: 'fct-blobwriter'
