@@ -164,6 +164,6 @@ Using this the Azure function is allowed to access and write a stream to the blo
 
 The complete example can be found over here https://github.com/robvanpamel/blogs-code/tree/main/2022-ManagedIdentities
 
-If you have any questions or comments please leave them over [here](https://github.com/robvanpamel/robvanpamel.github.io/issues/new) 
+If you have any questions or comments (including typos ;) ) please leave them over [here](https://github.com/robvanpamel/robvanpamel.github.io/issues/new) 
 
-Thanks for reading! 
+Thanks for reading and learning along! See you next time! 
