@@ -1,5 +1,5 @@
 ---
-title: Managed Identities in Azure with blob storage
+title: Accessing blob storage using Managed Identities in Azure
 date: 2022-11-21 
 excerpt_separator: <!--more-->
 tags: Azure Azure ManagedIdentities Bicep BlobStorage
