@@ -37,27 +37,33 @@ The function app and its linked storage account is described below. The function
     resource functionApp 'Microsoft.Web/sites@2022-03-01'={
     name: 'fct-blobwriter'
     location: location
-    kind: 'functionapp'  
+    kind: 'functionapp'
+    identity: {
+        type: 'UserAssigned'
+        userAssignedIdentities: {
+            '${usermanagedIdentity.id}': {}
+        }
+    }  
     properties:{
         serverFarmId: appServicePlan.id
         siteConfig: {
-        appSettings: [
-            {
-            name: 'AzureWebJobsStorage'
-            value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccountName};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
-            }
-            {
-            name: 'FUNCTIONS_EXTENSION_VERSION'
-            value: '~4'
-            }
-            {
-            name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
-            value: applicationInsights.properties.InstrumentationKey
-            }
-            {
-            name: 'FUNCTIONS_WORKER_RUNTIME'
-            value: 'dotnet-isolated'
-            }
+            appSettings: [
+                {
+                    name: 'AzureWebJobsStorage'
+                    value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccountName};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
+                }
+                {
+                    name: 'FUNCTIONS_EXTENSION_VERSION'
+                    value: '~4'
+                }
+                {
+                    name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
+                    value: applicationInsights.properties.InstrumentationKey
+                }
+                {
+                    name: 'FUNCTIONS_WORKER_RUNTIME'
+                    value: 'dotnet-isolated'
+                }
             }
         ]
         minTlsVersion: '1.2'
@@ -67,25 +73,87 @@ The function app and its linked storage account is described below. The function
     }
 
     resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
-    name: storageAccountName
-    location: location
-    sku: {
-        name: storageAccountType
+        name: storageAccountName
+        location: location
+        sku: {
+            name: storageAccountType
+        }
+        kind: 'StorageV2'
+        properties: {
+        }
+        tags:{
+            blog: 'blog-managed-identities-storage'
+        }
     }
-    kind: 'StorageV2'
-    properties: {
+
+In the identity section, an array of user managed identities are added. In this example only one is added. 
+
+    identity: {
+        type: 'UserAssigned'
+        userAssignedIdentities: {
+            '${usermanagedIdentity.id}': {}
+        }
+    }  
+
+Next to this, which user managed identity to use, is specified in the appsettings of the function.
+
+    {
+        name: 'AZURE_CLIENT_ID'
+        value: usermanagedIdentity.properties.clientId 
     }
-    tags:{
-        blog: 'blog-managed-identities-storage'
-    }
-    }
+
 
 Once the function is created, the next step is to create a User Managed Identity, a Role and a RoleAssignment. 
 
-The Role is created below. We are using an existing role. 
+The Role is created below, for simplicity an existing is being used here. You can find a full list with their corresponding guid over here https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor 
+
 
     @description('This is the built-in Storage Blob Data Contributor role. See https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor')
     resource contributorRoleDefinition 'Microsoft.Authorization/roleDefinitions@2018-01-01-preview' existing = {
       scope: subscription()
       name: 'ba92f5b4-2d11-453d-a403-e96b0029c9fe'
     }
+
+Once these are created, it is time to add the RoleAssignment. In this Role Assignment the User Managed Identity and the Role definition are coupled together.  
+
+    resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+        name: guid(resourceGroup().id, usermanagedIdentity.id, contributorRoleDefinition.id)
+        properties:{ 
+            principalId: usermanagedIdentity.properties.principalId 
+            roleDefinitionId: contributorRoleDefinition.id
+        }
+    }
+
+
+Now it is time to move over to the application to start using this. 
+
+## The Application 
+
+Before starting using the User Managed Identity, let see how this should typical is done without them. 
+
+### Without User Managed Identity
+When no Managed Identity is used, a SAS token is created on the Azure portal to gain access to the blobcontainer. An important aspect to get the SAS token from the Azure Portal, is to store it in a safe manner, eg Azure Keyvault.
+
+    public static async Task WriteWithSas()
+    {
+        var connectionString =
+                $"BlobEndpoint=https://{BLOB_ACCOUNT}.blob.core.windows.net/;{BLOB_SASTOKEN}";
+        var client = new BlobContainerClient(connectionString, BLOB_CONTAINER);
+        ... 
+        ... // stream stuff goes here
+        ...
+        return  await blobContainerClient.UploadBlobAsync($"file-{DateTime.UtcNow:yyyy-MM-dd-HH-mm-ss}.txt", stream);
+    }
+
+### Using User Managed Identity
+Now when using the User Managed Identity, we don't have to securely fetch any identities or so, we can just safely use it, which is the whole idea to make it much safer. 
+Now you'll notice that there is no SAS token, or another secret involved when creating the connection string. The difference between those, is to use the DefaultAzureCredential. This defaultAzureCrendential will use the user managed identity which is specified in the appsettings of the function `AZURE_CLIENT_ID`. 
+
+        string containerEndpoint = $"https://{BLOB_ACCOUNT}.blob.core.windows.net/{BLOB_CONTAINER}";
+
+        var client = new BlobContainerClient(new Uri(containerEndpoint), new DefaultAzureCredential());
+
+        await WriteToContainer(client);
+
+Using this the Azure function is allowed to access the blob storage! The complete example can be found over here 
+
