@@ -4,10 +4,10 @@ date: 2022-11-20
 excerpt_separator: <!--more-->
 tags: Azure Managed Identities
 ---
-In my previous blog post, you could already see which benefits Managed Identities have. As mentioned over there, they increase the security inside your Azure environment. Now we will take this theorie into practice and start working with it. We'll create an azure function which access a storage account by using the user Managed Identity.
+In my previous blog post, you could already see which benefits Managed Identities have. As mentioned over there, they increase the security inside your Azure environment. Now we will take this theorie into practice and start working with it. We'll create an azure function which access a storage account and writes a stream to it, by using the user Managed Identity.
  <!--more-->
 
-There will be 2 parts in this blogpost, the first one is to setup up the Azure environment, creating the azure function, the managed Identities etc. The second part where the application will be updated to use the User Managed Identity.
+There will be 2 parts in this blogpost, the first one is to setup up the Azure environment, creating the azure function, the managed Identities etc. The second part where the application will be updated to use the User Managed Identity to write the stream to the blobl storage.
 
 ## The Azure environment 
 
@@ -64,9 +64,12 @@ The function app and its linked storage account is described below. The function
                     name: 'FUNCTIONS_WORKER_RUNTIME'
                     value: 'dotnet-isolated'
                 }
-            }
-        ]
-        minTlsVersion: '1.2'
+                {
+                    name: 'AZURE_CLIENT_ID'
+                    value: usermanagedIdentity.properties.clientId 
+                }    
+            ]
+            minTlsVersion: '1.2'
         }
         httpsOnly: true
     }
@@ -152,10 +155,12 @@ Now you'll notice that there is no SAS token, or another secret involved when cr
         string containerEndpoint = $"https://{BLOB_ACCOUNT}.blob.core.windows.net/{BLOB_CONTAINER}";
 
         var client = new BlobContainerClient(new Uri(containerEndpoint), new DefaultAzureCredential());
-
-        await WriteToContainer(client);
-
-Using this the Azure function is allowed to access the blob storage! 
+        ... 
+        ... // stream stuff goes here
+        ...
+        return  await blobContainerClient.UploadBlobAsync($"file-{DateTime.UtcNow:yyyy-MM-dd-HH-mm-ss}.txt", stream);
+        
+Using this the Azure function is allowed to access and write a stream to the blob storage! 
 
 The complete example can be found over here https://github.com/robvanpamel/blogs-code/tree/main/2022-ManagedIdentities
 
