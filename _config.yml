@@ -5,11 +5,6 @@ author:
   name: Rob Van Pamel
   email: "rob.vanpamel@gmail.com"
 
-minima:
-  social_links:
-    twitter: robvanpamel
-    github: robvanpamel
-    linkedin: rob-van-pamel-83727317
 
 show_excerpts: true
 
