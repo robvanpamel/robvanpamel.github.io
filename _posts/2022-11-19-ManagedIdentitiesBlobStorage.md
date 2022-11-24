@@ -4,7 +4,7 @@ date: 2022-11-21
 excerpt_separator: <!--more-->
 tags: Azure ManagedIdentities Bicep BlobStorage
 ---
-In my previous blog post, the benefits of Managed Identities are handled. As mentioned over there, they increase the security inside your Azure environment. Now we will take this theorie into practice and start working with it. We'll create an azure function which access a storage account and writes a stream to it, by using the user Managed Identity.
+In my [previous blog post](https://robvanpamel.github.io/2022/10/31/ManagedIdentities.html), the benefits of Managed Identities are handled. As mentioned over there, they increase the security inside your Azure environment. Now we will take this theorie into practice and start working with it. We'll create an azure function which access a storage account and writes a stream to it, by using the user Managed Identity.
  <!--more-->
 
 There will be 2 parts in this blogpost, the first one is to setup up the Azure environment, creating the azure function, the managed Identities etc. The second part where the application will be updated to use the User Managed Identity to write the stream to the blobl storage.
@@ -108,7 +108,7 @@ Next to this, which user managed identity to use, is specified in the appsetting
 
 Once the function is created, the next step is to create a User Managed Identity, a Role and a RoleAssignment. 
 
-The Role is created below, for simplicity an existing is being used here. You can find a full list with their corresponding guid over here https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor 
+The Role is created below, for simplicity an existing is being used here. You can find a full list with their corresponding guid over [here](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)
 
 
     @description('This is the built-in Storage Blob Data Contributor role. See https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor')
