@@ -152,17 +152,17 @@ When no Managed Identity is used, a SAS token is created on the Azure portal to 
 Now when using the User Managed Identity, we don't have to securely fetch any identities or so, we can just safely use it, which is the whole idea to make it much safer. 
 Now you'll notice that there is no SAS token, or another secret involved when creating the connection string. The difference between those, is to use the DefaultAzureCredential. This defaultAzureCrendential will use the user managed identity which is specified in the appsettings of the function `AZURE_CLIENT_ID`. 
 
-        string containerEndpoint = $"https://{BLOB_ACCOUNT}.blob.core.windows.net/{BLOB_CONTAINER}";
+    string containerEndpoint = $"https://{BLOB_ACCOUNT}.blob.core.windows.net/{BLOB_CONTAINER}";
 
-        var client = new BlobContainerClient(new Uri(containerEndpoint), new DefaultAzureCredential());
-        ... 
-        ... // stream stuff goes here
-        ...
-        return  await blobContainerClient.UploadBlobAsync($"file-{DateTime.UtcNow:yyyy-MM-dd-HH-mm-ss}.txt", stream);
-        
+    var client = new BlobContainerClient(new Uri(containerEndpoint), new DefaultAzureCredential());
+    ... 
+    ... // stream stuff goes here
+    ...
+    return  await blobContainerClient.UploadBlobAsync($"file-{DateTime.UtcNow:yyyy-MM-dd-HH-mm-ss}.txt", stream);
+    
 Using this the Azure function is allowed to access and write a stream to the blob storage! 
 
-The complete example can be found over here https://github.com/robvanpamel/blogs-code/tree/main/2022-ManagedIdentities
+The complete example can be found over [here](https://github.com/robvanpamel/blogs-code/tree/main/2022-ManagedIdentities)
 
 If you have any questions or comments (including typos ;) ) please leave them over [here](https://github.com/robvanpamel/robvanpamel.github.io/issues/new) 
 
