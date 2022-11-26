@@ -23,4 +23,4 @@ Thanks for reading and learning along! See you next time!
 
 ### References about vscode web
 
-https://code.visualstudio.com/docs/editor/vscode-web ( here, it still mentions readonly for Azure Repos, but this is outdated )
+[https://code.visualstudio.com/docs/editor/vscode-web](https://code.visualstudio.com/docs/editor/vscode-web) ( here, it still mentions readonly for Azure Repos, but this is outdated )
