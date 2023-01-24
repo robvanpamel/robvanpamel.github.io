@@ -1,11 +1,11 @@
 ---
-title: My Agenda for NDC London
+title: My agenda for NDC London
 date: 2023-01-24 
 excerpt_separator: <!--more-->
 tags: NDC Education learning 
 ---
 
-Tomorrow I'm heading to the NDC Conference in London. NDC Conferences are widely known to offer great quality conferences related to (but not only) dotnet technology. 
+Tomorrow I'm heading to the NDC Conference in London. NDC Conferences are widely known to offer superb quality related to (but not only) dotnet technology and development. 
 Here below you can find which sessions I would definitly like to attend<!--more-->. Off course I am looking forward to the sessions of my friends Hannes Lowette and Florian Verdonck! 
 
 ## Wednesday 
@@ -33,3 +33,5 @@ Here below you can find which sessions I would definitly like to attend<!--more-
 - Making a difference in open-source *by Florian Verdonck*
 - Use your source code to document your application *by Michaël Hompus*
 - OpenAPI & .NET: You're Doing It Wrong *by Mark Rendle*
+
+And after this on friday, we mpve to the pubconf for more ... ;-) (see https://pubconf.io/events/2023/london/ )
