@@ -34,4 +34,4 @@ Here below you can find which sessions I would definitly like to attend<!--more-
 - Use your source code to document your application *by Michaël Hompus*
 - OpenAPI & .NET: You're Doing It Wrong *by Mark Rendle*
 
-And after this on friday, we mpve to the pubconf for more ... ;-) (see https://pubconf.io/events/2023/london/ )
+And after this on friday, we move to the pubconf for more ... ;-) (see https://pubconf.io/events/2023/london/ )
