@@ -10,7 +10,7 @@ Last week me and my colleagues went to the NDC conference in London. This NDC co
 Each day you can choose between 7 different tracks, whatever triggers you the most. If you like hands-on, there are workshops available during the conference.   
 My goal was to get more up to date with latest architecture patterns and look at some AWS tracks. 
 
-3 of my favourite sessions are listed below:<!--more-->
+3 of my favourite sessions are listed below:<!--more--> there is much more good content, but I can't list them all off course. 
 
 ### Intentional Code - Minimalism in a World of Dogmatic Design by David Whitney
 During this talk David told us how we could create a better design for our applications. Not design in the sense that you should add design patterns or best practices but more to the fundamentals. Looking at how we as a developer feel when we look at code. Do we want to close the file, or can we understand the flow at a glance? 
@@ -32,6 +32,6 @@ Let me sum some of them up for you. To learn all of them you should go and liste
 - Use of sync communications 
 
 
-There were a lot of other interesting sessions but it would take too long to list all the talks I attended. I must admit that the overall quality of the given talks was very high. And looking back also includes the nice lunches we had in combination with a good party from the line-breakers on Thursday. 
+once again, there were a lot of other interesting sessions but it would take too long to list all the talks I attended. I must admit that the overall quality of the given talks was very high. And looking back also includes the nice lunches we had in combination with a good party from the line-breakers on Thursday. 
 
 That will be it for today, see you next time! 
