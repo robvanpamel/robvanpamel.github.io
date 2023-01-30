@@ -32,6 +32,6 @@ Let me sum some of them up for you. To learn all of them you should go and liste
 - Use of sync communications 
 
 
-once again, there were a lot of other interesting sessions but it would take too long to list all the talks I attended. I must admit that the overall quality of the given talks was very high. And looking back also includes the nice lunches we had in combination with a good party from the line-breakers on Thursday. 
+Once again, there were a lot of other interesting sessions but it would take way too long to list all these talks. I must admit that the overall quality of the given talks on the conference was very high. And looking back also includes the nice lunches we had in combination with a good party from the line-breakers on Thursday. 
 
 That will be it for today, see you next time! 
