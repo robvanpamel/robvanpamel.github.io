@@ -5,7 +5,7 @@ excerpt_separator: <!--more-->
 tags: NDC Education learning 
 ---
 
-Last week me and my colleagues went to the NDC conference in London. This NDC conference is a 3 day conference where you can attend several talks related to different topics like architecture, cloud, testing, .NET and many more.
+Last week my colleagues and I went to the NDC conference in London. This NDC conference is a 3 day conference where you can attend several talks related to different topics like architecture, cloud, testing, .NET and many more.
 
 Each day you can choose between 7 different tracks, whatever triggers you the most. If you like hands-on, there are workshops available during the conference.   
 My goal was to get more up to date with latest architecture patterns and look at some AWS tracks. 
