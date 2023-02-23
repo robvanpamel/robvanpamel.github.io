@@ -303,7 +303,7 @@ Resource associated with Activity:
 
 ## Remarks on the OTLP exporter
 
-In my situation I've deployed my collector in the cloud, but I had some trouble connecting to it. I noticed that data was being sent towards the collector, but it didn't ended up there. After some digging into Wireshark I saw that mu deployed collector returned a 404 Error status code. After digging around for a solution I got it working by adding the correct path and the correct protocol.
+In my situation I've deployed my collector in the cloud, but I had some trouble connecting to it. I noticed that data was being sent towards the collector, but it didn't ended up there. After some digging into Wireshark I saw that my deployed collector returned a 404 Error status code. After digging around for a solution I got it working by adding the correct path and the correct protocol.
 
 Path for the OTLP Exporter 
 
