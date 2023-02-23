@@ -41,15 +41,15 @@ There are 2 collector variants available, the _'[normal](https://github.com/open
 </p>
 
 ## Receivers
-Here you can define how you will ingest data into your collector. The default is the Open Telemetry Protocol (OTLP). OTLP runs on HTTP(4318) and on gRPC (port 4317). Other options which are out-of-the-box available are Jaeger and Prometheus, but if you use the contrib variant, you have even more options.  
-
+Here you can define how you will ingest data into your collector, it can be one source, but nothings holds you from using multiple receivers. The default is the Open Telemetry Protocol (OTLP). OTLP runs on HTTP(4318) and on gRPC (port 4317). Other options which are out-of-the-box available are Jaeger and Prometheus, but if you use the contrib variant, you have even more options.  
+- https://opentelemetry.io/docs/collector/configuration/#receivers 
 ## Processors
 Here is where you can add some magic to your traces. Each trace, log or metric can be tweaked in this space. Some examples are adding tags, filtering logs or traces, sample, ... More information can be found here. 
 - https://opentelemetry.io/docs/collector/configuration/#processors 
 
 ## Exporters
 Like the name mentions, the exporter is responsible for exporter the telemetry data into your observability tool. Just like at the receiver side, the default is the Open Telemetry Protocol (HTTP and gRPC), but also Jaeger and Prometheus are present. And when using the contrib variant of the collector, much more is possible. In the example below we will be using the datadog exporter, cause we would like to import our data into it.  
-https://opentelemetry.io/docs/collector/configuration/#exporters
+- https://opentelemetry.io/docs/collector/configuration/#exporters
 
 ## Configuration 
 
@@ -162,7 +162,7 @@ When you want to collect traces, metrics and logs, you have to make some code ch
 
 ## Collecting logs
 Collecting logs is the easiest part, if you are already using the `ILogger` interfaces that dotnet core provides you.
-The Nuget Packages to add to your project are listed below. Be aware that these are still in beta, most likely because the open standard isn't completely approved. This shouldn't hold you from using OpenTelemetry.   
+The Nuget Packages to add to your project are listed below. Remember that they are still in beta/preview but it shouldn't hold you back.   
 - [OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs](https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs/1.4.0-rc.3)
 - [OpenTelemetry.Exporter.Console](https://www.nuget.org/packages/OpenTelemetry.Exporter.Console/1.4.0-rc.3) 
 
