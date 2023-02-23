@@ -5,7 +5,7 @@ excerpt_separator: <!--more-->
 tags: OpenTelemetry Datadog dotnet 
 ---
 <p align="center">
-  <img src="./otel/observability.jpg" width="400">
+  <img src="https://raw.githubusercontent.com/robvanpamel/robvanpamel.github.io/main/_posts/otel/observability.jpg" width="500">
 </p>
 When your project is growing, the need to gain more insights in your application is growing along. You need to know in detail what is happening inside the application, either to resolve a bug or to improve some performance issues. These insights were in the past mainly received by adding extensive logging. This is something that most of us have already done, and is the easier step to start with. 
 If you really would like to go a step further, adding trace and metric information is the way to go. Traces information is extremely valuable when you start to work with distributed applications. They allow you to follow a request across multiple systems. <!--more-->
@@ -37,7 +37,7 @@ A metric is a measurement about a service, captured at runtime.
 The open telemetry Collector is the process which will act as a gateway to receive the signals (telemetry data), process it and send to your observability tool. Using the open telemetry collector isn't a mandatory step. It is possible to send the telemetry data to your observability tool, however this isn't recommended for production environments. The collector can take care of retries, TODO  and more.  
 There are 2 collector variants available, the _'[normal](https://github.com/open-telemetry/opentelemetry-collector/releases)'_ and the _[contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases)_. As you expected, the contrib variant includes more receivers, exporters and processors built by the community.   
 <p align="center">
-  <img src="./otel/otel_collector.svg" width="400">
+  <img src="https://raw.githubusercontent.com/robvanpamel/robvanpamel.github.io/main/_posts/otel/otel_collector.svg" width="400">
 </p>
 
 ## Receivers
