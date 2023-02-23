@@ -306,13 +306,6 @@ In my situation I've deployed my collector in the cloud, but I had some trouble 
 
 Path for the OTLP Exporter 
 
-
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
-
-
 | Signal | Path | Example | 
 | -------| -----| --------|
 | Metric | v1/metrics | http://mydeployedcollector.com:4318/v1/metrics | 
