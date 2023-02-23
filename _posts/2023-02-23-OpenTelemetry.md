@@ -163,7 +163,7 @@ When you want to collect traces, metrics and logs, you have to make some code ch
 
 ## Collecting logs
 Collecting logs is the easiest part, if you are already using the `ILogger` interfaces that dotnet core provides you.
-The Nuget Packages to add to your project are listed below. Remember that they are still in beta/preview but it shouldn't hold you back.   
+The Nuget Packages to add to your project are listed below. Remember that they are still in beta/preview but you already starting using it.   
 - [OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs](https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs/1.4.0-rc.3)
 - [OpenTelemetry.Exporter.Console](https://www.nuget.org/packages/OpenTelemetry.Exporter.Console/1.4.0-rc.3) 
 
