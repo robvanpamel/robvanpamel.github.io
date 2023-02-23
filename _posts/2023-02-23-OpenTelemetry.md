@@ -7,8 +7,8 @@ tags: OpenTelemetry Datadog dotnet
 <p align="center">
   <img src="https://raw.githubusercontent.com/robvanpamel/robvanpamel.github.io/main/_posts/otel/observability.jpg" width="500">
 </p>
-When your project is growing, the need to gain more insights in your application is growing along. You need to know in detail what is happening inside the application, either to resolve a bug or to improve some performance issues. These insights were in the past mainly received by adding extensive logging. This is something that most of us have already done, and is the easier step to start with. 
-If you really would like to go a step further, adding trace and metric information is the way to go. Traces information is extremely valuable when you start to work with distributed applications. They allow you to follow a request across multiple systems. <!--more-->
+When your project is growing, the need to gain more insights in your application is growing along. You need to know in detail what is happening inside the application, either to resolve a bug or to improve some performance issues. In the past these insights were mainly received by adding extensive logging. The most of us have already done this, and is the easier step to start with. 
+If you would like to go a step further, adding trace and metric information is the way to go. Trace information is extremely valuable when you start to work with distributed applications. They allow you to follow a request across multiple systems. <!--more-->
 
 The combination of logs, traces and metrics are called telemetry data. 
 While there are different ways to collect the data above, OpenTelemetry should be the defacto-standard these days. Opentelemetry is a Cloud Native Computing Foundation (CNCF) project because it provides us with an open standard to collect telemetry data from our applications. _(the standard isn't fully approved yet, but this shouldn't hold us from using it)_
