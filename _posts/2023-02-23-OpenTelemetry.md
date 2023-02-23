@@ -34,7 +34,7 @@ A metric is a measurement about a service, captured at runtime.
 
 # Open Telemetry Collector 
 
-The open telemetry Collector is the process which will act as a gateway to receive the signals (telemetry data), process it and send to your observability tool. Using the open telemetry collector isn't a mandatory step. It is possible to send the telemetry data to your observability tool, however this isn't recommended for production environments. The collector can take care of retries, TODO  and more.  
+The open telemetry Collector is the process which will act as a gateway to receive the signals (telemetry data), process it and send to your observability tool. Using the open telemetry collector isn't a mandatory step. It is possible to send the telemetry data to your observability tool, however this isn't recommended for production environments. The collector can take care of retries and more.  
 There are 2 collector variants available, the _'[normal](https://github.com/open-telemetry/opentelemetry-collector/releases)'_ and the _[contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases)_. As you expected, the contrib variant includes more receivers, exporters and processors built by the community.   
 <p align="center">
   <img src="https://raw.githubusercontent.com/robvanpamel/robvanpamel.github.io/main/_posts/otel/otel_collector.svg" width="400">
