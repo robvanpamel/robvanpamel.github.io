@@ -5,10 +5,11 @@ author:
   name: Rob Van Pamel
   email: "rob.vanpamel@gmail.com"
 
-social_links:
-    - { platform: github, user_url: "https://github.com/robvanpamel" }
-    - { platform: twitter, user_url: "https://twitter.com/robvanpamel" }
-    - { platform: linkedin, user_url: "https://www.linkedin.com/in/rob-van-pamel-83727317" }
+minima:
+  social_links:
+      - { platform: github, user_url: "https://github.com/robvanpamel" }
+      - { platform: twitter, user_url: "https://twitter.com/robvanpamel" }
+      - { platform: linkedin, user_url: "https://www.linkedin.com/in/rob-van-pamel-83727317" }
 
 show_excerpts: true
 google_analytics: G-S3SP5GLLRW
