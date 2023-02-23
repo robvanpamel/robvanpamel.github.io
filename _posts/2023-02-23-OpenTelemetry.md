@@ -66,7 +66,7 @@ receivers:
 ```` 
 
 The next part to configure is the processor side. Like mentioned above you can tweak your signals here before sending them to your exporter. The example above has 2 processors. 
-One thing to note over here is that not all the processors are already in a stable phase. I personally don't mind it as, but you should be aware of this.  
+One thing to note over here is that not all the processors are already in a stable phase. I personally don't mind it as, but you should be aware of this. See [this link for more information about the stability levels ](https://github.com/open-telemetry/opentelemetry-collector#stability-levels) 
 
 The first processor is a filter that we defined for our traces. In the example below we have defined some healthchecks on our application, and we do not want them to 'pollute' our traces when everything is configured as it should be (HTTP status = 200). By adding this filter, we can remove these traces, but if the health check fails (HTTP status <> 500), we will still see it. This filter processor has lots of possibilities and examples which can be found [on the readme](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor). 
 
