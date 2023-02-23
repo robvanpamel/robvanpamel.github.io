@@ -1,5 +1,5 @@
 ---
-title: Find the hidden secrets in your application using opentelemetry
+title: Find your application hidden secrets using opentelemetry
 date: 2023-02-23 
 excerpt_separator: <!--more-->
 tags: OpenTelemetry Datadog dotnet 
