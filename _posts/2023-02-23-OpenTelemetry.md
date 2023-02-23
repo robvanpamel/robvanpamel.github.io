@@ -305,6 +305,14 @@ Resource associated with Activity:
 In my situation I've deployed my collector in the cloud, but I had some trouble connecting to it. I noticed that data was being sent towards the collector, but it didn't ended up there. After some digging into Wireshark I saw that mu deployed collector returned a 404 Error status code. After digging around for a solution I got it working by adding the correct path and the correct protocol.
 
 Path for the OTLP Exporter 
+
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+
+
 | Signal | Path | Example | 
 | -------| -----| --------|
 | Metric | v1/metrics | http://mydeployedcollector.com:4318/v1/metrics | 
@@ -321,7 +329,9 @@ Path for the OTLP Exporter
 
 ````
 
-With this configuration you will be able to use opentelemetry and by doing so, getting more and more insights into your application. Which might lead to faster bug resolutions, less issues, ... Thank you for reading with me. You have a comment or found an issue? Ping me on twitter or leave them over [here](https://github.com/robvanpamel/robvanpamel.github.io/issues/new) 
+With this configuration you will be able to use opentelemetry and by doing so, getting more and more insights into your application. Which might lead to faster bug resolutions, less issues, ... 
+
+Thank you for reading with me. You have a comment or found an issue? Ping me on twitter or leave them over [here](https://github.com/robvanpamel/robvanpamel.github.io/issues/new) 
 
 
 # References
