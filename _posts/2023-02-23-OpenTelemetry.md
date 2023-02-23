@@ -43,6 +43,7 @@ There are 2 collector variants available, the _'[normal](https://github.com/open
 ## Receivers
 Here you can define how you will ingest data into your collector, it can be one source, but nothings holds you from using multiple receivers. The default is the Open Telemetry Protocol (OTLP). OTLP runs on HTTP(4318) and on gRPC (port 4317). Other options which are out-of-the-box available are Jaeger and Prometheus, but if you use the contrib variant, you have even more options.  
 - https://opentelemetry.io/docs/collector/configuration/#receivers 
+
 ## Processors
 Here is where you can add some magic to your traces. Each trace, log or metric can be tweaked in this space. Some examples are adding tags, filtering logs or traces, sample, ... More information can be found here. 
 - https://opentelemetry.io/docs/collector/configuration/#processors 
