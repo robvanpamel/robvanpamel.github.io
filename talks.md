@@ -16,6 +16,7 @@ I will guide you through the current ‘messaging landscape’ so you have a goo
 
 ### Presented in:
 * AWS Summit 2023 Amsterdam
+* Full Stack Europe 2023 
 * AWS Community Day NL
 * AWS Meetup Brussels 
 * Haxx 2023
